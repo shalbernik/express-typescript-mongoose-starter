@@ -1,4 +1,4 @@
-Typescript and Express.js 
+Typescript && Express.js && Mongoose
 =========================
 
 An Express.js project implemented using Typescript with strongly typed objects:
@@ -8,32 +8,26 @@ An Express.js project implemented using Typescript with strongly typed objects:
 Clone the repository
 
 ```
-npm install 
+npm install
 ```
 
-For development:
+For development (start in watch mode):
 ```
-npm run start
+npm run dev (NODE_ENV=development)
 ```
 
-To serve:
+Fro production:
 ```
-npm run serve
+npm run prod (NODE_ENV=production)
 ```
 
 Browse to http://localhost:3000
 
-Wow, it works!
-
-# Start in watch mode
-
-`npm run nodemon`
-
 # Folder structure
 
     ├── config
-    │   ├── config.ts
-    │   └── express.ts
+    │   ├── express.ts
+    │   └── environments.ts
     ├── controllers
     │   └── index.server.controller.ts
     ├── index.ts
@@ -52,7 +46,5 @@ Wow, it works!
 
 Typescript will output the compiled code to the `dist` folder.
 
-# License
-
-MIT - Do with as you like.
+# License - MIT.
 

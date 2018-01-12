@@ -5,6 +5,7 @@ import * as logger from 'morgan';
 import * as mongoose from 'mongoose';
 import * as dotenv from 'dotenv';
 import {Environments} from "./environments";
+import {ExpertRouter} from "../api/expert/expert.route";
 
 class Express {
 	public app: express.Express;
@@ -13,6 +14,7 @@ class Express {
 	constructor() {
 		this.app = express();
 		this.setEnvironment();
+		this.setRoutes();
 		this.initMiddleware();
 		this.initErrorHandlers();
 		this.connectToMongo();
@@ -41,11 +43,16 @@ class Express {
 		this.app.use(bodyParser.urlencoded({extended: false}));
 		this.app.use(cookieParser());
 
-		// Allow CORSE
+		// Allow CORS
 		this.app.use((req: express.Request, res: express.Response, next: Function) => {
 			res.header('Access-Control-Allow-Origin', '*');
 			res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-			next();
+			if (req.method == 'OPTIONS') {
+				res.send(200);
+			}
+			else {
+				next();
+			}
 		});
 	}
 
@@ -56,18 +63,18 @@ class Express {
 		});
 
 		this.app.use((err: any, req: express.Request, res: express.Response, next): void => {
-			res.status(err.status || 500).render('error', {
-				message: err.message,
-				error: {}
-			});
+			res.status(err.status || 500).send({error: 'Something failed'});
 		});
 	}
 
 	private connectToMongo(): void {
-	// 	console.log('\x1b[32m', 'NODE_ENV=', process.env.NODE_ENV);
 		mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true}).then(
 				() => console.log('\x1b[32m', '[mongo-db] connection was established'),
 				() => console.log('\x1b[41m', '[mongo-db] connection was crashed'));
+	}
+
+	private setRoutes() {
+		ExpertRouter.init(this.app);
 	}
 }
 
