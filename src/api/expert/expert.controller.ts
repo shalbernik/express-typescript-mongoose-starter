@@ -5,4 +5,8 @@ export class ExpertController {
 	public static getAll(req: Request, res: Response, next: NextFunction): void {
 		res.json([new Expert(1, 'John', 'Staff'), new Expert(2, 'Sara', 'CTO')]);
 	}
+
+	public static create(): void {
+
+	}
 }
