@@ -1,13 +1,13 @@
-Typescript && Express.js && Mongoose
+Typescript + Express.js + Mongoose
 =========================
 
 An Express.js project implemented using Typescript with strongly typed objects. It's really easy and extensible starter.
 
 # Features
-1. *Typescript*
-2. *Nodemon*
-3. *Mongoose*
-4. *ExpressJS*
+- **Typescript**
+- **Nodemon**
+- **Mongoose**
+- **ExpressJS**
 
 # Installation
 
@@ -31,22 +31,28 @@ Browse to http://localhost:3000
 
 # Folder structure
 
-    ├── config
-    │   ├── express.ts
-    │   └── environments.ts
-    ├── controllers
-    │   └── index.server.controller.ts
-    ├── index.ts
-    ├── public
-    │   └── stylesheets
-    │       └── style.css
-    ├── routes
-    │   └── index.server.route.ts
-    ├── tsconfig.json
-    └── views
-        ├── error.jade
-        ├── index.jade
-        └── layout.jade
+
+	├── LICENSE
+	├── README.md
+	├── src
+	│   ├── api
+	│   │   └── expert
+	│   │       ├── expert.controller.ts
+	│   │       ├── expert.route.ts
+	│   │       └── expert.schema.ts
+	│   ├── common
+	│   │   ├── entities
+	│   │   │   ├── expert.ts
+	│   │   │   └── namedEntity.ts
+	│   │   └── interfaces
+	│   │       └── INamedEntity.ts
+	│   ├── config
+	│   │   ├── environments.ts
+	│   │   └── express.ts
+	│   └── index.ts
+	└── tsconfig.json
+
+
 
 # Typescript
 
