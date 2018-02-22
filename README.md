@@ -1,7 +1,13 @@
 Typescript && Express.js && Mongoose
 =========================
 
-An Express.js project implemented using Typescript with strongly typed objects:
+An Express.js project implemented using Typescript with strongly typed objects. It's really easy and extensible starter.
+
+# Features
+1. *Typescript*
+2. *Nodemon*
+3. *Mongoose*
+4. *ExpressJS*
 
 # Installation
 
@@ -13,12 +19,12 @@ npm install
 
 For development (start in watch mode):
 ```
-npm run dev (NODE_ENV=development)
+npm run dev (NODE_ENV = development)
 ```
 
 Fro production:
 ```
-npm run prod (NODE_ENV=production)
+npm run prod (NODE_ENV = production)
 ```
 
 Browse to http://localhost:3000
@@ -46,5 +52,6 @@ Browse to http://localhost:3000
 
 Typescript will output the compiled code to the `dist` folder.
 
-# License - MIT.
+# License
+MIT
 
