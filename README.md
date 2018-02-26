@@ -1,7 +1,8 @@
 Typescript + Express.js + Mongoose
 =========================
 
-An Express.js project implemented using Typescript with strongly typed objects. It's really easy and extensible starter.
+An Express.js project implemented using Typescript with strongly typed objects. It's really easy and extensible starter with examples for base CRUD operations.
+
 
 # Features
 - **Typescript**
@@ -31,28 +32,28 @@ Browse to http://localhost:3000
 
 # Folder structure
 
-
-	├── LICENSE
-	├── README.md
-	├── src
-	│   ├── api
-	│   │   └── expert
-	│   │       ├── expert.controller.ts
-	│   │       ├── expert.route.ts
-	│   │       └── expert.schema.ts
-	│   ├── common
-	│   │   ├── entities
-	│   │   │   ├── expert.ts
-	│   │   │   └── namedEntity.ts
-	│   │   └── interfaces
-	│   │       └── INamedEntity.ts
-	│   ├── config
-	│   │   ├── environments.ts
-	│   │   └── express.ts
-	│   └── index.ts
-	└── tsconfig.json
-
-
+.
+├── LICENSE
+├── README.md
+├── package.json
+├── src
+│   ├── api
+│   │   └── expert
+│   │       ├── expert.controller.ts
+│   │       ├── expert.route.ts
+│   │       └── expert.schema.ts
+│   ├── common
+│   │   ├── entities
+│   │   │   ├── expert.ts
+│   │   │   └── namedEntity.ts
+│   │   └── interfaces
+│   │       ├── IExpert.ts
+│   │       └── INamedEntity.ts
+│   ├── config
+│   │   ├── environments.ts
+│   │   └── express.ts
+│   └── index.ts
+└── tsconfig.json
 
 # Typescript
 
