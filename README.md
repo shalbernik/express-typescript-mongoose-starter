@@ -32,28 +32,27 @@ Browse to http://localhost:3000
 
 # Folder structure
 
-.
-├── LICENSE
-├── README.md
-├── package.json
-├── src
-│   ├── api
-│   │   └── expert
-│   │       ├── expert.controller.ts
-│   │       ├── expert.route.ts
-│   │       └── expert.schema.ts
-│   ├── common
-│   │   ├── entities
-│   │   │   ├── expert.ts
-│   │   │   └── namedEntity.ts
-│   │   └── interfaces
-│   │       ├── IExpert.ts
-│   │       └── INamedEntity.ts
-│   ├── config
-│   │   ├── environments.ts
-│   │   └── express.ts
-│   └── index.ts
-└── tsconfig.json
+	├── LICENSE
+	├── README.md
+	├── package.json
+	├── src
+	│   ├── api
+	│   │   └── expert
+	│   │       ├── expert.controller.ts
+	│   │       ├── expert.route.ts
+	│   │       └── expert.schema.ts
+	│   ├── common
+	│   │   ├── entities
+	│   │   │   ├── expert.ts
+	│   │   │   └── namedEntity.ts
+	│   │   └── interfaces
+	│   │       ├── IExpert.ts
+	│   │       └── INamedEntity.ts
+	│   ├── config
+	│   │   ├── environments.ts
+	│   │   └── express.ts
+	│   └── index.ts
+	└── tsconfig.json
 
 # Typescript
 
