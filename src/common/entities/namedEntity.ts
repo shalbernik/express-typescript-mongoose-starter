@@ -1,7 +1,7 @@
-import {INamedEntity} from "../interfaces/INamedEntity";
+import { INamedEntity } from '../interfaces/INamedEntity';
 
 export class NamedEntity implements INamedEntity {
-	public id: any;
+	public id?: any;
 	public name: string;
 
 	constructor(id: any, name: string) {

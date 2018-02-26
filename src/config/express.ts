@@ -4,8 +4,8 @@ import * as express from 'express';
 import * as logger from 'morgan';
 import * as mongoose from 'mongoose';
 import * as dotenv from 'dotenv';
-import {Environments} from "./environments";
-import {ExpertRouter} from "../api/expert/expert.route";
+import { Environments } from './environments';
+import { ExpertRouter } from '../api/expert/expert.route';
 
 class Express {
 	public app: express.Express;
@@ -14,8 +14,8 @@ class Express {
 	constructor() {
 		this.app = express();
 		this.setEnvironment();
-		this.setRoutes();
 		this.initMiddleware();
+		this.setRoutes();
 		this.initErrorHandlers();
 		this.connectToMongo();
 	}
@@ -63,7 +63,8 @@ class Express {
 		});
 
 		this.app.use((err: any, req: express.Request, res: express.Response, next): void => {
-			res.status(err.status || 500).send({error: 'Something failed'});
+			console.log(err);
+			res.status(err.status || 500).send({error: err});
 		});
 	}
 

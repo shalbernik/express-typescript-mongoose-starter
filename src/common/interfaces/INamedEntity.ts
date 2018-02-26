@@ -1,4 +1,4 @@
 export interface INamedEntity {
-	id: any;
+	id?: any;
 	name: string;
 }
